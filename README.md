@@ -1,3 +1,13 @@
+---
+title: RAG Research Assistant
+emoji: 📚
+colorFrom: blue
+colorTo: green
+sdk: gradio
+sdk_version: 4.44.0
+app_file: app.py
+pinned: false
+---
 # RAG Research Assistant
 
 A retrieval-augmented generation (RAG) system that lets you ask natural language questions across multiple ML research papers and receive cited, grounded answers pointing to exact pages.

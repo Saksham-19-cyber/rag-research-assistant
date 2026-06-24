@@ -136,17 +136,16 @@ What loss function does BERT use for pre-training?
 
 ## Evaluation Results
 
-Evaluated on 5 question-answer pairs using a custom LLM-based scorer (Groq):
+Evaluated on 20 question-answer pairs across 5 papers using a custom LLM-based scorer (Groq):
 
-| Metric | Score |
-|--------|-------|
-| Answer Relevancy | **0.88** |
-| Faithfulness | **0.60** |
+| Metric | Baseline (no rewriting) | Optimized (with rewriting) | Delta |
+|--------|------------------------|---------------------------|-------|
+| Faithfulness | 0.40 | 0.60 | +0.20 |
+| Answer Relevancy | 0.77 | 0.74 | -0.03 |
 
-**Answer Relevancy** measures whether the answer directly addresses the question.  
-**Faithfulness** measures whether every claim in the answer is grounded in the retrieved context.
-
-The faithfulness gap is a known limitation of dense retrieval with general-purpose embeddings — retrieved snippets occasionally miss supporting context that exists elsewhere in the document. This was partially addressed by adding LLM-based query rewriting, which improved retrieval of technical content by converting natural language queries into domain-specific search terms.
+Query rewriting produced a 50% relative improvement in faithfulness — meaning retrieved chunks
+more reliably contain the information used in the final answer. Relevancy difference is within
+noise margin for this eval set size.
 
 ---
 

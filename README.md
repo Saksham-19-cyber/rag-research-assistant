@@ -10,7 +10,7 @@ pinned: false
 python_version: "3.11"
 ---
 # RAG Research Assistant
-
+**Live Demo:** [huggingface.co/spaces/IEHFUPEE71348adkhf/rag-research-assistant](https://huggingface.co/spaces/IEHFUPEE71348adkhf/rag-research-assistant)
 A retrieval-augmented generation (RAG) system that lets you ask natural language questions across multiple ML research papers and receive cited, grounded answers pointing to exact pages.
 
 Built from scratch as a portfolio project demonstrating end-to-end ML engineering: document ingestion, vector search, LLM integration, query optimization, and quantitative evaluation.
